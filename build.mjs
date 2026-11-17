@@ -1,5 +1,9 @@
 // Landing sayfasını iki dilde üretir: node build.mjs  →  index.html, en/index.html
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync, readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+
+// Cloudflare önbelleği eski CSS'i vermesin diye adres içeriğe göre değişir
+const CSS_V = createHash('sha256').update(readFileSync('style.css')).digest('hex').slice(0, 10);
 
 const IOS = 'https://apps.apple.com/app/id6759522037';
 const PLAY = 'https://play.google.com/store/apps/details?id=com.taskbuddies.mobile';
@@ -154,7 +158,7 @@ const page = (t) => {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style.css?v=${CSS_V}">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"TaskBuddies","operatingSystem":"iOS, Android","applicationCategory":"ProductivityApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"${t.cur}"},"url":"https://taskbuddies.net${t.path}"}</script>
 </head>
 <body>
@@ -297,6 +301,7 @@ const page = (t) => {
 };
 
 writeFileSync('index.html', page(T.tr));
+writeFileSync('open.html', readFileSync('open.html', 'utf8').replace(/\/style\.css(\?v=[0-9a-f]+)?/,`/style.css?v=${CSS_V}`));
 mkdirSync('en', { recursive: true });
 writeFileSync('en/index.html', page(T.en));
 console.log('built index.html, en/index.html');
