@@ -7,6 +7,8 @@ const CSS_V = createHash('sha256').update(readFileSync('style.css')).digest('hex
 
 const IOS = 'https://apps.apple.com/app/id6759522037';
 const PLAY = 'https://play.google.com/store/apps/details?id=com.taskbuddies.mobile';
+// Web uygulaması (giriş için)
+const WEB = 'https://web.taskbuddies.net/';
 
 const i = (d) => `<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
 const ic = {
@@ -32,7 +34,7 @@ const T = {
     lang: 'tr', path: '/', other: '/en/', otherLabel: 'EN', locale: 'tr_TR', cur: 'TRY', iosHl: '?l=tr', playHl: '&hl=tr',
     title: 'TaskBuddies: Evi paylaşanlar için ev işleri, ortak masraflar ve borçlar',
     desc: 'Ev arkadaşınla ya da partnerinle ev işlerini paylaş, kirayı ve faturaları böl, borçları iki taraf da onaylasın. Evi paylaşanlar için ücretsiz uygulama.',
-    nav: ['Özellikler', 'Borç takibi', 'SSS'], download: 'İndir',
+    nav: ['Özellikler', 'Borç takibi', 'SSS'], download: 'İndir', login: 'Giriş yap',
     h1a: 'Evi paylaşanlar için', h1b: 'işler, masraflar ve borçlar.',
     lead: 'Ev arkadaşınla ya da partnerinle temizliği paylaş, faturaları böl, borcu ikiniz de onaylayın.',
     ios: ['iPhone için', 'App Store'], play: ['Android için', 'Google Play'],
@@ -79,7 +81,7 @@ const T = {
     lang: 'en', path: '/en/', other: '/', otherLabel: 'TR', locale: 'en_US', cur: 'USD', iosHl: '', playHl: '&hl=en',
     title: 'TaskBuddies: Chores, shared costs and IOUs for people who share a home',
     desc: 'Share chores with your roommate or partner, split rent and bills, and let both sides confirm every debt. A free app for people who share a home.',
-    nav: ['Features', 'Debt tracking', 'FAQ'], download: 'Download',
+    nav: ['Features', 'Debt tracking', 'FAQ'], download: 'Download', login: 'Log in',
     h1a: 'For people who share a home', h1b: 'chores, costs and IOUs.',
     lead: 'Share chores with your roommate or partner, split the bills, and both confirm every debt.',
     ios: ['For iPhone', 'App Store'], play: ['For Android', 'Google Play'],
@@ -170,6 +172,7 @@ const page = (t) => {
       </nav>
       <div class="top-actions">
         <a class="lang" href="${t.other}" hreflang="${t.other === '/' ? 'tr' : 'en'}">${t.otherLabel}</a>
+        <a class="login" href="${WEB}">${t.login}</a>
         <a class="btn btn-ghost btn-sm" href="#${idDl}">${t.download}</a>
       </div>
     </div>
