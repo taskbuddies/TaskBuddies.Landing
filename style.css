@@ -239,6 +239,12 @@ footer { padding: var(--section-gap) 0 32px; }
 .store:active { transform: scale(.98); }
 .store + .store { background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
 .store svg { width: 20px; height: 20px; }
+/* Telefonda "Uygulamada aç" ana eylem; mağaza bağlantıları ikincil */
+.open .open-app { margin: 0 auto 16px; justify-content: center; min-width: min(280px, 100%); padding: 14px 24px; font-size: 17px; }
+.open.has-app .stores .store { background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
+.open .hint { font-size: 15px; margin: 20px auto 0; }
+.open .hint[hidden] { display: none; }
+.open .hint.nudge { color: var(--ink); font-weight: 600; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

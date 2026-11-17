@@ -4,7 +4,7 @@ taskbuddies.net için statik tanıtım sitesi (TR `/`, EN `/en/`).
 
 Ayrıca iki işi var:
 - `/.well-known/apple-app-site-association` ve `/.well-known/assetlinks.json`: iOS Universal Links ve Android App Links doğrulaması. Uygulama `taskbuddies.net` alan adını davet ve şifre sıfırlama bağlantıları için kullanıyor; bu dosyalar olmadan bağlantılar uygulamada açılmaz. İçerik `api.taskbuddies.net` üzerindekilerle aynı; orada değişirse buraya da kopyala.
-- `/invitations/*`, `/register`, `/reset-password`, `/accept-invitation`: uygulama yüklü değilse `open.html` gösterilir (mağaza bağlantıları).
+- `/invitations/*`, `/register`, `/reset-password`, `/accept-invitation`: bağlantı uygulamada açılmazsa `open.html` gösterilir. Telefonda "Uygulamada aç" düğmesi (iOS `taskbuddies://`, Android paket hedefli `intent://`) ve mağaza bağlantıları; metin yola göre (davet / şifre sıfırlama).
 
 ## Yayınlama (Coolify)
 
