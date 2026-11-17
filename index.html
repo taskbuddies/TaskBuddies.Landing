@@ -4,191 +4,181 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TaskBuddies: Görevler, ortak harcamalar ve borçlar tek yerde</title>
-  <meta name="description" content="Ev işlerini paylaştır, market ve fatura harcamalarını birlikte takip et, borçları unutma. TaskBuddies; aileler, ev arkadaşları ve küçük ekipler için görev ve harcama uygulaması.">
+  <meta name="description" content="Ev işlerini paylaştır, market ve fatura harcamalarını birlikte takip et, borçları unutma. Aileler, ev arkadaşları ve küçük ekipler için görev ve harcama uygulaması.">
   <link rel="canonical" href="https://taskbuddies.net/">
   <link rel="alternate" hreflang="tr" href="https://taskbuddies.net/">
   <link rel="alternate" hreflang="en" href="https://taskbuddies.net/en/">
   <link rel="alternate" hreflang="x-default" href="https://taskbuddies.net/en/">
   <link rel="icon" type="image/png" href="/assets/icon-192.png">
   <link rel="apple-touch-icon" href="/assets/icon-192.png">
-  <meta name="theme-color" content="#0b1230">
+  <meta name="theme-color" content="#f7f8fb">
   <meta name="apple-itunes-app" content="app-id=6759522037">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://taskbuddies.net/">
   <meta property="og:title" content="TaskBuddies: Görevler, ortak harcamalar ve borçlar tek yerde">
-  <meta property="og:description" content="Evde ailenle, işte ekibinle. Görevleri paylaş, harcamaları birlikte takip et, borçları unutma.">
-  <meta property="og:image" content="https://taskbuddies.net/assets/hero.jpg">
+  <meta property="og:description" content="Ev işlerini paylaştır, market ve fatura harcamalarını birlikte takip et, borçları unutma. Aileler, ev arkadaşları ve küçük ekipler için görev ve harcama uygulaması.">
+  <meta property="og:image" content="https://taskbuddies.net/assets/screens/tr-01-home.jpg">
   <meta property="og:locale" content="tr_TR">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"MobileApplication","name":"TaskBuddies","operatingSystem":"iOS, Android","applicationCategory":"ProductivityApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"url":"https://taskbuddies.net/"}
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"TaskBuddies","operatingSystem":"iOS, Android","applicationCategory":"ProductivityApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"url":"https://taskbuddies.net/"}</script>
 </head>
 <body>
   <header class="top">
-    <div class="wrap">
-      <a class="brand" href="/"><img src="/assets/icon-192.png" alt="" width="34" height="34">TaskBuddies</a>
-      <nav>
-        <a href="#ozellikler">Özellikler</a>
-        <a href="#borc">Borç takibi</a>
-        <a href="#sss">SSS</a>
-        <a class="lang" href="/en/" hreflang="en">EN</a>
+    <div class="wrap top-row">
+      <a class="brand" href="/"><img src="/assets/icon-192.png" alt="" width="32" height="32">TaskBuddies</a>
+      <nav class="links" aria-label="Bölümler">
+        <a href="#ozellikler">Özellikler</a><a href="#borc">Borç takibi</a><a href="#sss">SSS</a>
       </nav>
+      <div class="top-actions">
+        <a class="lang" href="/en/" hreflang="en">EN</a>
+        <a class="btn btn-ghost btn-sm" href="#indir">İndir</a>
+      </div>
     </div>
   </header>
 
   <main>
-    <div class="hero">
-      <div class="wrap">
-        <div>
-          <h1>Görevler, harcamalar ve borçlar.<br>Tek yerde, birlikte.</h1>
-          <p class="lead">Ev işlerini paylaştır, market ve fatura harcamalarını birlikte kaydet, kimin kime borçlu olduğunu unutma. Evde ailenle, işte ekibinle.</p>
-          <div class="stores">
-            <a class="store" href="https://apps.apple.com/tr/app/id6759522037" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
-              <span><small>iPhone için</small>App Store</span>
-            </a>
-            <a class="store" href="https://play.google.com/store/apps/details?id=com.taskbuddies.mobile&amp;hl=tr" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3l14 9-14 9V3z"/></svg>
-              <span><small>Android için</small>Google Play</span>
-            </a>
-          </div>
+    <div class="wrap">
+      <section class="hero dots" aria-labelledby="h">
+        <div class="hero-copy">
+          <img class="app-tile" src="/assets/icon-192.png" alt="" width="72" height="72">
+          <h1 id="h"><span>Görevler, harcamalar ve borçlar</span> <span class="soft">tek yerde, birlikte.</span></h1>
+          <p class="lead">Ailenle ya da ekibinle işleri paylaş, harcamaları birlikte tut, kim kime borçlu bil.</p>
+          <div class="stores center">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6759522037?l=tr" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg><span><small>iPhone için</small>App Store</span></a>
+          <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.taskbuddies.mobile&hl=tr" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l14 9-14 9z"/></svg><span><small>Android için</small>Google Play</span></a>
         </div>
-        <img class="hero-img" src="/assets/hero.jpg" alt="Görevler, takvim ve bütçe etrafında birlikte çalışan bir aile" width="720" height="720">
-      </div>
+        </div>
+
+        <div class="float f-note" aria-hidden="true"><span class="pin"></span><p>Market: süt, ekmek, deterjan. Can alacak.</p></div>
+        <div class="float f-rem card-ui" aria-hidden="true">
+          <p class="ui-title"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>Hatırlatıcı</p>
+          <p class="ui-strong">Elektrik faturası</p>
+          <p class="chip"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Cuma 18:00</p>
+        </div>
+        <div class="float f-tasks card-ui" aria-hidden="true">
+          <p class="ui-title">Bugünkü görevler</p>
+          <div class="ui-row"><span class="tick done"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span><span>Bulaşık</span><span class="who">Ece</span></div>
+          <div class="bar"><i style="--w:100%"></i></div>
+          <div class="ui-row"><span class="tick"></span><span>Çamaşır</span><span class="who">Can</span></div>
+          <div class="bar"><i style="--w:45%"></i></div>
+        </div>
+        <div class="float f-debt card-ui" aria-hidden="true">
+          <p class="ui-title"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg>Borç onayı</p>
+          <div class="ui-row"><span class="ui-strong">Akşam yemeği</span><span class="amt">₺600</span></div>
+          <p class="chip ok"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Zeynep onayladı</p>
+        </div>
+      </section>
     </div>
 
-    <section>
+    <section id="ozellikler" class="block">
       <div class="wrap">
-        <div class="head">
-          <h2>Tanıdık geldi mi?</h2>
-          <p>Çoğu ev ve ekip, işleri üç farklı yerde yürütmeye çalışıyor.</p>
+        <h2 class="h2"><span>Ev ve iş için</span> <span class="soft">aynı uygulama, iki mod.</span></h2>
+        <div class="cols">
+          <div class="col"><span class="tile"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z"/></svg></span><h3>Ev modu</h3><p>Ev işleri, aile harcamaları, bütçe ve birikim hedefleri.</p></div>
+          <div class="col"><span class="tile"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg></span><h3>İş modu</h3><p>Görev atama, harcama onayı, proje bütçesi ve raporlar.</p></div>
+          <div class="col"><span class="tile"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg></span><h3>Birlikte</h3><p>Sohbet, anket ve bildirimlerle herkes aynı sayfada.</p></div>
         </div>
-        <div class="pain">
-          <div><p>Yapılacaklar bir uygulamada, kimin üstlendiği belli değil.</p></div>
-          <div><p>Market ve fatura harcamaları bir tabloda, ay sonu kimse toplamı bilmiyor.</p></div>
-          <div><p>“Sana borcum ne kadardı?” sorusu WhatsApp grubunda kaybolup gidiyor.</p></div>
+        <div class="showcase">
+          <img class="phone side" src="/assets/screens/tr-02-tasks.jpg" alt="Görev panosu: kim neyi ne zaman yapacak" width="480" height="968" loading="lazy">
+          <img class="phone mid" src="/assets/screens/tr-01-home.jpg" alt="Ana sayfa: görevler ve bu ayki harcamalar" width="480" height="968" loading="lazy">
+          <img class="phone side" src="/assets/screens/tr-04-exp_family.jpg" alt="Aile harcamaları kategorilere göre" width="480" height="968" loading="lazy">
         </div>
       </div>
     </section>
 
-    <section class="alt" id="ozellikler">
+    <section class="block tint">
       <div class="wrap">
-        <div class="head">
-          <h2>İki mod, tek uygulama</h2>
-          <p>Evde ve işte ihtiyaçlar farklı. TaskBuddies hangi moddaysan ona göre şekilleniyor.</p>
-        </div>
-        <div class="modes">
-          <div class="mode home">
-            <h3>Ev modu</h3>
-            <p class="sub">Aileler ve ev arkadaşları için</p>
-            <ul>
-              <li>Ev işlerini paylaştır, kimin neyi yaptığını gör</li>
-              <li>Market, kira, faturalar: ortak harcamaları kaydet ve böl</li>
-              <li>Aylık bütçe ve harcama analizi</li>
-              <li>Tekrarlayan faturaları bir kez gir, her ay takip et</li>
-              <li>Birikim hedefleri koy, ilerlemeni izle</li>
-            </ul>
-          </div>
-          <div class="mode biz">
-            <h3>İş modu</h3>
-            <p class="sub">Küçük işletmeler ve ekipler için</p>
-            <ul>
-              <li>Görev ata, tamamlanan işi onayla</li>
-              <li>Harcama onayı: taslak, onay bekliyor, onaylandı, ödendi</li>
-              <li>Proje ve takım bütçeleri</li>
-              <li>Yönetici paneli ile ekibi tek bakışta gör</li>
-              <li>Excel ve PDF raporları</li>
-            </ul>
-          </div>
+        <h2 class="h2"><span>Hepsi tek yerde,</span> <span class="soft">ayrı uygulamalara gerek yok.</span></h2>
+        <div class="bento">
+          <article class="b b-wide">
+            <div class="b-text"><h3>Görevleri paylaştır</h3><p>Ata, hatırlat, tamamlanınca onayla.</p></div>
+            <div class="mini-list" aria-hidden="true">
+              <div class="mini-row"><span class="tick done"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span><span>Bulaşık</span><span class="who">Ece</span><span class="when">Bugün</span></div>
+              <div class="mini-row"><span class="tick"></span><span>Faturayı öde</span><span class="who">Can</span><span class="when">Cuma</span></div>
+              <div class="mini-row"><span class="tick"></span><span>Hafta sonu gezisi</span><span class="who">Aile</span><span class="when">Cumartesi</span></div>
+            </div>
+          </article>
+          <article class="b">
+            <div class="b-text"><h3>Harcamaları birlikte tut</h3><p>Market, kira, fatura: ay sonunda toplam hazır.</p></div>
+            <div class="bars" aria-hidden="true">
+              <div class="bar-col" style="--h:78%"><i></i><span>Market</span></div><div class="bar-col" style="--h:52%"><i></i><span>Fatura</span></div><div class="bar-col" style="--h:92%"><i></i><span>Kira</span></div><div class="bar-col" style="--h:30%"><i></i><span>Diğer</span></div>
+            </div>
+          </article>
+          <article class="b">
+            <div class="b-text"><h3>Birikim hedefi</h3><p>Tatil için her ay biraz.</p></div>
+            <div class="ring" aria-hidden="true"><span>Tatil</span></div>
+          </article>
+          <article class="b b-wide">
+            <div class="b-text"><h3>Sohbet ve anket</h3><p>Ayrı bir mesaj grubuna gerek yok.</p></div>
+            <div class="poll" aria-hidden="true">
+              <p class="ui-strong">Cumartesi nereye?</p>
+              <div class="opt" style="--w:68%"><span>Piknik</span></div>
+              <div class="opt" style="--w:32%"><span>Sinema</span></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="borc">
+    <section id="borc" class="block">
       <div class="wrap split">
-        <div class="media"><img src="/assets/debt.jpg" alt="İki kişi ortak bir borç kaydını onaylıyor" width="720" height="720" loading="lazy"></div>
         <div>
-          <h2>Borçlar artık “sözlü” değil</h2>
-          <p>Borcu kaydet, karşı taraf uygulamadan onaylasın. İki taraf da aynı rakamı görür, tartışma biter.</p>
+          <h2 class="h2 left"><span>Borçlar artık sözlü değil,</span> <span class="soft">iki taraf da onaylar.</span></h2>
           <ol class="steps">
-            <li>Borç kaydını oluştur: kim, ne kadar, ne için.</li>
+            <li>Borcu kaydet: kim, ne kadar, ne için.</li>
             <li>Karşı taraf uygulamada onaylar ya da itiraz eder.</li>
             <li>Ödeme gününde hatırlatma gider, ödenince kapanır.</li>
           </ol>
         </div>
-      </div>
-    </section>
-
-    <section class="alt">
-      <div class="wrap split rev">
-        <div class="media"><img src="/assets/chat.jpg" alt="Ekip üyeleri uygulama içinde sohbet ediyor" width="720" height="720" loading="lazy"></div>
-        <div>
-          <h2>Konuşun, karar verin, işi bitirin</h2>
-          <p>Ayrı bir mesajlaşma grubuna gerek yok. Sohbet, anket ve bildirimler görevlerin ve harcamaların hemen yanında.</p>
+        <div class="debt-visual">
+          <img class="phone solo" src="/assets/screens/tr-05-debts.jpg" alt="Karşılıklı borç ekranı: bekleyen, imzalanmış ve kapatılan kayıtlar" width="480" height="968" loading="lazy">
+          <p class="float-badge"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Zeynep onayladı</p>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="wrap">
-        <div class="head">
-          <h2>Düzen için gereken her şey</h2>
-        </div>
-        <div class="grid">
-          <div class="card"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg><h3>Panolar ve listeler</h3><p>Projeleri panolarla, adımları kontrol listeleriyle düzenle.</p></div>
-          <div class="card"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg><h3>Hatırlatıcılar</h3><p>Son tarihler ve ödeme günleri için anlık bildirim.</p></div>
-          <div class="card"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1h-3z"/><circle cx="12" cy="13" r="3.5"/></svg><h3>Fotoğraf ve dosya</h3><p>Görevlere fiş, fotoğraf ya da belge ekle.</p></div>
-          <div class="card"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.6 2.6 21.4 11.4a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 12.6A2 2 0 0 1 2 11.2V4a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.6z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg><h3>Etiketler</h3><p>Renkli etiketlerle her şeyi kolayca bul.</p></div>
-          <div class="card"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="5"/><path d="M18.1 10.4A5 5 0 1 1 10.4 18.1"/><path d="M7 6h1v4"/></svg><h3>Çoklu para birimi</h3><p>Tatilde ya da yurt dışında farklı para birimleriyle çalış.</p></div>
-          <div class="card"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Etkinlik geçmişi</h3><p>Kim, ne zaman, ne yaptı; hepsi kayıtlı.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="alt" id="sss">
-      <div class="wrap">
-        <div class="head"><h2>Sık sorulan sorular</h2></div>
+    <section id="sss" class="block tint">
+      <div class="wrap faq-wrap">
+        <h2 class="h2 left">Sık sorulan sorular</h2>
         <div class="faq">
           <details><summary>TaskBuddies ücretli mi?</summary><p>İndirmesi ve temel özellikleri ücretsiz. Görevler, harcama girişi, borç takibi ve sohbet herkese açık.</p></details>
           <details><summary>Ailemi ya da ekibimi nasıl eklerim?</summary><p>Bir aile ya da ekip oluştur, üyeleri e-posta ile davet et. Davet bağlantısına dokunan kişi doğrudan uygulamaya katılır.</p></details>
-          <details><summary>Ev modu ile İş modu arasındaki fark ne?</summary><p>Ev modu aile işleri, ortak harcamalar ve aile bütçesi için. İş modu görev onayı, harcama onay akışı, proje bütçeleri ve raporlar için. İstediğin zaman mod değiştirebilirsin.</p></details>
-          <details><summary>Borç kaydını karşı taraf görmek zorunda mı?</summary><p>Evet, borç kaydı iki taraflıdır. Karşı taraf kaydı onaylar ya da itiraz eder; böylece iki taraf da aynı rakamı görür.</p></details>
-          <details><summary>Verilerim güvende mi?</summary><p>Verilerin şifreli bağlantıyla taşınır ve yalnızca senin ve davet ettiğin kişilerin erişimine açıktır. Hesabını ve verilerini istediğin zaman silebilirsin.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="cta">
-          <h2>Bu akşam ev işlerini paylaştırmaya başla</h2>
-          <p>İndir, aileni ya da ekibini davet et, ilk görevini bir dakikada oluştur.</p>
-          <div class="stores">
-            <a class="store" href="https://apps.apple.com/tr/app/id6759522037" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
-              <span><small>iPhone için</small>App Store</span>
-            </a>
-            <a class="store" href="https://play.google.com/store/apps/details?id=com.taskbuddies.mobile&amp;hl=tr" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3l14 9-14 9V3z"/></svg>
-              <span><small>Android için</small>Google Play</span>
-            </a>
-          </div>
+          <details><summary>Ev modu ile İş modu arasındaki fark ne?</summary><p>Ev modu aile işleri, ortak harcamalar ve aile bütçesi için. İş modu görev onayı, harcama onay akışı, proje bütçeleri ve raporlar için.</p></details>
+          <details><summary>Borç kaydını karşı taraf görmek zorunda mı?</summary><p>Evet, borç kaydı iki taraflıdır. Karşı taraf onaylar ya da itiraz eder; iki taraf da aynı rakamı görür.</p></details>
+          <details><summary>Verilerim güvende mi?</summary><p>Verilerin şifreli bağlantıyla taşınır ve yalnızca senin ve davet ettiğin kişilerin erişimine açıktır. Hesabını istediğin zaman silebilirsin.</p></details>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <span>© 2026 TaskBuddies</span>
-      <nav>
-        <a href="https://taskbuddies.github.io/taskbuddies-support/privacy.html">Gizlilik Politikası</a>
-        <a href="https://taskbuddies.github.io/taskbuddies-support/">Destek</a>
-        <a href="https://api.taskbuddies.net/account-deletion/">Hesap silme</a>
-        <a href="mailto:support@taskbuddies.net">support@taskbuddies.net</a>
-      </nav>
+  <footer id="indir" class="wrap">
+    <div class="foot dots">
+      <div class="foot-top">
+        <div>
+          <a class="brand dark" href="/"><img src="/assets/icon-192.png" alt="" width="32" height="32">TaskBuddies</a>
+          <p class="foot-h"><span>Düzenli kal,</span> <span class="soft">birlikte.</span></p>
+          <div class="stores ">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6759522037?l=tr" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg><span><small>iPhone için</small>App Store</span></a>
+          <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.taskbuddies.mobile&hl=tr" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l14 9-14 9z"/></svg><span><small>Android için</small>Google Play</span></a>
+        </div>
+        </div>
+        <nav class="foot-links" aria-label="Alt bağlantılar">
+          <a href="#ozellikler">Özellikler</a>
+          <a href="#borc">Borç takibi</a>
+          <a href="#sss">SSS</a>
+          <a href="https://taskbuddies.github.io/taskbuddies-support/privacy.html">Gizlilik Politikası</a>
+          <a href="https://taskbuddies.github.io/taskbuddies-support/">Destek</a>
+          <a href="https://api.taskbuddies.net/account-deletion/">Hesap silme</a>
+        </nav>
+      </div>
+      <div class="tiles" aria-hidden="true">
+        <span class="tile t0"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span><span class="tile t1"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span><span class="tile t2"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 10h18"/><circle cx="16.5" cy="15" r="1.2"/></svg></span><span class="tile t3"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span><span class="tile t4"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4h11l-2 4 2 4H5"/></svg></span><span class="tile t5"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></span><span class="tile t6"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><span class="tile t7"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M2 20h20"/></svg></span><span class="tile t8"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg></span><span class="tile t9"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+      </div>
+      <div class="foot-bottom"><span>© 2026 TaskBuddies</span><a href="mailto:support@taskbuddies.net">support@taskbuddies.net</a></div>
     </div>
   </footer>
 </body>

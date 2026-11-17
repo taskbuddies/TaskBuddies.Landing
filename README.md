@@ -23,3 +23,13 @@ Ayrıca iki işi var:
 ```bash
 docker build -t tb-landing . && docker run --rm -p 8080:80 tb-landing
 ```
+
+## Sayfaları üretmek
+
+`index.html` ve `en/index.html` elle düzenlenmez; metinler ve şablon `build.mjs` içinde:
+
+```bash
+node build.mjs
+```
+
+Ekran görüntüleri `assets/screens/` altında, mobil reponun `artifacts/store-screenshots/android/<dil>/` dosyalarından kırpıldı.
