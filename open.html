@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskBuddies uygulamasında aç</title>
+  <meta name="robots" content="noindex">
+  <meta name="apple-itunes-app" content="app-id=6759522037">
+  <link rel="icon" type="image/png" href="/assets/icon-192.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="open">
+    <div>
+      <img class="logo" src="/assets/icon-192.png" alt="TaskBuddies" width="88" height="88">
+      <h1 data-tr="Bu bağlantı TaskBuddies uygulamasında açılır" data-en="This link opens in the TaskBuddies app">Bu bağlantı TaskBuddies uygulamasında açılır</h1>
+      <p data-tr="Uygulama yüklü değilse önce indir, sonra bağlantıya tekrar dokun. Davetler ve şifre sıfırlama doğrudan uygulamada açılır." data-en="If the app is not installed, download it first, then tap the link again. Invitations and password resets open right in the app.">Uygulama yüklü değilse önce indir, sonra bağlantıya tekrar dokun. Davetler ve şifre sıfırlama doğrudan uygulamada açılır.</p>
+      <div class="stores">
+        <a class="store" id="ios" href="https://apps.apple.com/app/id6759522037" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+          <span>App Store</span>
+        </a>
+        <a class="store" id="android" href="https://play.google.com/store/apps/details?id=com.taskbuddies.mobile" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3l14 9-14 9V3z"/></svg>
+          <span>Google Play</span>
+        </a>
+      </div>
+    </div>
+  </main>
+  <script>
+    (function () {
+      var lang = (navigator.language || 'tr').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en';
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-' + lang + ']').forEach(function (el) { el.textContent = el.getAttribute('data-' + lang); });
+      if (lang === 'en') document.title = 'Open in TaskBuddies';
+      var ua = navigator.userAgent;
+      if (/iPhone|iPad|iPod/.test(ua)) document.getElementById('android').style.display = 'none';
+      else if (/Android/.test(ua)) document.getElementById('ios').style.display = 'none';
+    })();
+  </script>
+</body>
+</html>

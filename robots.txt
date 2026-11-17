@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /invitations/
+Disallow: /register
+Disallow: /reset-password
+Sitemap: https://taskbuddies.net/sitemap.xml

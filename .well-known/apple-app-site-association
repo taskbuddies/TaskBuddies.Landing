@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "84MCUT2DQ5.net.taskbuddies.app",
+        "paths": [
+          "/register",
+          "/reset-password",
+          "/auth/reset-password",
+          "/invitations/*",
+          "/accept-invitation"
+        ]
+      }
+    ]
+  }
+}

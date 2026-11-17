@@ -1,0 +1,28 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.taskbuddies.mobile",
+            "sha256_cert_fingerprints": [
+                "99:D3:E6:9C:0A:49:16:54:A1:3A:2B:79:44:EF:D4:9A:9E:BA:DE:4B:25:F2:74:90:FC:DF:03:D2:52:90:EF:91",
+                "B7:28:4E:F4:D1:BA:6B:93:86:BA:5A:6C:3A:03:94:A9:6C:FC:6F:2A:82:69:DF:D3:7D:6A:B0:C8:BD:C4:BA:1D"
+            ]
+        }
+    },
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.taskbuddies.mobile.dev",
+            "sha256_cert_fingerprints": [
+                "F2:3C:75:BB:64:6E:2B:82:C9:C3:7A:57:98:9E:E8:3A:89:20:B0:D7:04:C0:7E:63:AF:25:2B:27:5C:C5:40:29",
+                "1A:69:4F:1C:13:1A:6B:9F:57:61:C3:B5:60:F7:52:A8:7A:27:75:33:2A:90:19:C3:F4:AF:08:60:EC:C6:2B:DA"
+            ]
+        }
+    }
+]
