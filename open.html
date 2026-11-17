@@ -7,14 +7,18 @@
   <meta name="robots" content="noindex">
   <meta name="apple-itunes-app" content="app-id=6759522037">
   <link rel="icon" type="image/png" href="/assets/icon-192.png">
-  <link rel="stylesheet" href="/style.css?v=c065ff0644">
+  <link rel="stylesheet" href="/style.css?v=91cb1b88c2">
 </head>
 <body>
-  <main class="open">
+  <main class="open" id="page">
     <div>
       <img class="logo" src="/assets/icon-192.png" alt="TaskBuddies" width="88" height="88">
-      <h1 data-tr="Bu bağlantı TaskBuddies uygulamasında açılır" data-en="This link opens in the TaskBuddies app">Bu bağlantı TaskBuddies uygulamasında açılır</h1>
-      <p data-tr="Uygulama yüklü değilse önce indir, sonra bağlantıya tekrar dokun. Davetler ve şifre sıfırlama doğrudan uygulamada açılır." data-en="If the app is not installed, download it first, then tap the link again. Invitations and password resets open right in the app.">Uygulama yüklü değilse önce indir, sonra bağlantıya tekrar dokun. Davetler ve şifre sıfırlama doğrudan uygulamada açılır.</p>
+      <h1 id="title">Bu bağlantı TaskBuddies uygulamasında açılır</h1>
+      <p id="lead">Uygulama yüklü değilse önce indir, sonra bağlantıya tekrar dokun. Davetler ve şifre sıfırlama doğrudan uygulamada açılır.</p>
+      <a class="store open-app" id="open-app" href="#" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        <span id="open-label">Uygulamada aç</span>
+      </a>
       <div class="stores">
         <a class="store" id="ios" href="https://apps.apple.com/app/id6759522037" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
@@ -25,17 +29,94 @@
           <span>Google Play</span>
         </a>
       </div>
+      <p class="hint" id="hint" hidden></p>
     </div>
   </main>
   <script>
     (function () {
+      var PLAY = 'https://play.google.com/store/apps/details?id=com.taskbuddies.mobile';
       var lang = (navigator.language || 'tr').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en';
+      var path = location.pathname;
+      var kind = /^\/(invitations|accept-invitation)/.test(path) || (/^\/register/.test(path) && /[?&]token=/.test(location.search))
+        ? 'invite'
+        : /^\/(auth\/)?reset-password/.test(path) ? 'reset' : 'other';
+
+      var copy = {
+        tr: {
+          invite: ['Bir eve davet edildin',
+            'Ev işlerini ve ortak masrafları birlikte takip etmek için TaskBuddies\'e katıl. Uygulama yüklüyse aşağıdan aç; davet hemen kabul edilir.',
+            'Uygulama yüklü değil mi? İndir, kurduktan sonra WhatsApp\'a (ya da bağlantıyı aldığın yere) dönüp aynı bağlantıya tekrar dokun.'],
+          reset: ['Şifreni sıfırla',
+            'Yeni şifreni TaskBuddies uygulamasında belirleyeceksin.',
+            'Uygulama yüklü değil mi? İndir, sonra e-postadaki bağlantıya tekrar dokun.'],
+          other: ['Bu bağlantı TaskBuddies uygulamasında açılır',
+            'Uygulama yüklüyse aşağıdan aç.',
+            'Uygulama yüklü değil mi? İndir, sonra bağlantıya tekrar dokun.'],
+          open: 'Uygulamada aç',
+          nudge: 'Uygulama açılmadıysa henüz yüklü değil: önce indir, sonra bağlantıya tekrar dokun.',
+          title: 'TaskBuddies uygulamasında aç'
+        },
+        en: {
+          invite: ['You\'re invited to a home',
+            'Join on TaskBuddies to share chores and expenses together. If you have the app, open it below and the invitation is accepted right away.',
+            'Don\'t have the app? Download it, then go back to WhatsApp (or wherever you got the link) and tap the same link again.'],
+          reset: ['Reset your password',
+            'You\'ll set your new password in the TaskBuddies app.',
+            'Don\'t have the app? Download it, then tap the link in the email again.'],
+          other: ['This link opens in the TaskBuddies app',
+            'If you have the app, open it below.',
+            'Don\'t have the app? Download it, then tap the link again.'],
+          open: 'Open in the app',
+          nudge: 'If the app didn\'t open, it isn\'t installed yet: download it first, then tap the link again.',
+          title: 'Open in TaskBuddies'
+        }
+      }[lang];
+
+      var text = copy[kind];
       document.documentElement.lang = lang;
-      document.querySelectorAll('[data-' + lang + ']').forEach(function (el) { el.textContent = el.getAttribute('data-' + lang); });
-      if (lang === 'en') document.title = 'Open in TaskBuddies';
+      document.title = copy.title;
+      document.getElementById('title').textContent = text[0];
+      document.getElementById('lead').textContent = text[1];
+      var hint = document.getElementById('hint');
+      hint.textContent = text[2];
+      hint.hidden = false;
+      document.getElementById('open-label').textContent = copy.open;
+
+      // Uygulamanın tanıdığı yol (Android App Links filtresi /accept-invitation'ı kapsamıyor)
+      var appPath = path.indexOf('/accept-invitation') === 0 ? '/invitations/accept-by-token' : path;
+      var appTarget = appPath + location.search;
+
       var ua = navigator.userAgent;
-      if (/iPhone|iPad|iPod/.test(ua)) document.getElementById('android').style.display = 'none';
-      else if (/Android/.test(ua)) document.getElementById('ios').style.display = 'none';
+      var isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && 'ontouchend' in document);
+      var isAndroid = /Android/.test(ua);
+      var openApp = document.getElementById('open-app');
+
+      if (isIOS) {
+        document.getElementById('android').style.display = 'none';
+        // Universal Link tarayıcıda açıldıysa (WhatsApp içi tarayıcı, iOS Chrome) özel şema uygulamayı açar
+        openApp.href = 'taskbuddies://' + appTarget;
+      } else if (isAndroid) {
+        document.getElementById('ios').style.display = 'none';
+        // Paket hedefli intent: App Links doğrulaması olmasa da uygulamanın https filtresine gider;
+        // uygulama yoksa Play Store açılır.
+        openApp.href = 'intent://taskbuddies.net' + appTarget +
+          '#Intent;scheme=https;package=com.taskbuddies.mobile;S.browser_fallback_url=' +
+          encodeURIComponent(PLAY) + ';end';
+      }
+
+      if (isIOS || isAndroid) {
+        openApp.hidden = false;
+        document.getElementById('page').classList.add('has-app');
+        openApp.addEventListener('click', function () {
+          // Uygulama açılırsa sayfa arka plana düşer; açılmadıysa kullanıcıyı mağazaya yönlendir
+          setTimeout(function () {
+            if (!document.hidden) {
+              hint.textContent = copy.nudge;
+              hint.classList.add('nudge');
+            }
+          }, 1600);
+        });
+      }
     })();
   </script>
 </body>
