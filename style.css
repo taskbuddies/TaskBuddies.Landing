@@ -28,7 +28,7 @@
   --shadow-1: 0 1px 2px rgba(15, 23, 42, .06), 0 8px 24px rgba(15, 23, 42, .08);
   --shadow-2: 0 2px 4px rgba(15, 23, 42, .06), 0 24px 48px rgba(15, 23, 42, .12);
   --focus: var(--blue);
-  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --r-lg: 28px;
   --r-md: 20px;
   --r-sm: 12px;
