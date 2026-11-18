@@ -89,16 +89,11 @@ p { text-wrap: pretty; }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 700; font-size: 18px; }
 .brand img { width: 32px; height: 32px; border-radius: 8px; }
 .links { display: flex; gap: 32px; }
-.links a, .lang, .login { text-decoration: none; font-size: 15px; font-weight: 400; color: var(--muted); }
-.links a:hover, .lang:hover, .login:hover { color: var(--ink); }
-.links a:active, .lang:active, .login:active { color: var(--blue); }
+.links a, .lang { text-decoration: none; font-size: 15px; font-weight: 400; color: var(--muted); }
+.links a:hover, .lang:hover { color: var(--ink); }
+.links a:active, .lang:active { color: var(--blue); }
 .top-actions { display: flex; align-items: center; justify-content: flex-end; gap: 20px; }
 @media (max-width: 760px) { .links { display: none; } .top-row { grid-template-columns: 1fr auto; } }
-/* Dar telefonlarda logo, dil, giriş ve İndir tek satıra sığsın */
-@media (max-width: 420px) { .top-row { gap: 8px; } .top-actions { gap: 12px; } .top .btn-sm { padding: 8px 12px; } }
-.login { white-space: nowrap; }
-/* Telefonda yalnızca logo simgesi kalır, giriş ve İndir sığsın */
-@media (max-width: 400px) { .brand { font-size: 0; gap: 0; } }
 
 /* Hero */
 .hero { position: relative; border-radius: var(--r-lg); padding: 64px 24px 32px; overflow: clip; border: 1px solid var(--line); }
