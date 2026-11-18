@@ -18,6 +18,10 @@ Ayrıca iki işi var:
    `200` ve `content-type: application/json` olmalı, yönlendirme olmamalı.
 5. Google Search Console'a `https://taskbuddies.net/sitemap.xml` ekle.
 
+**Otomatik deploy:** Coolify'daki uygulama (`taskbuddies-prod` → production) Git kaynağı olarak `task-buddies-api` GitHub App'ini kullanır; `main`'e her push webhook ile deploy edilir. App'in GitHub kurulumunda bu repo seçili olmalı. Kaynak "Public GitHub" olursa webhook gelmez ve her deploy elle yapılmak zorunda kalır.
+
+**Önbellek:** `/assets/` Cloudflare'de 7 gün önbellekte kalır. Bir görseli aynı adla değiştirirsen HTML'deki adresinin `?v=` sürümünü artır (`build.mjs` ve üretilen sayfalar).
+
 ## Yerel önizleme
 
 ```bash
