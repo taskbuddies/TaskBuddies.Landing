@@ -144,8 +144,8 @@ const page = (t) => {
   <link rel="alternate" hreflang="tr" href="https://taskbuddies.net/">
   <link rel="alternate" hreflang="en" href="https://taskbuddies.net/en/">
   <link rel="alternate" hreflang="x-default" href="https://taskbuddies.net/en/">
-  <link rel="icon" type="image/png" href="/assets/icon-192.png">
-  <link rel="apple-touch-icon" href="/assets/icon-192.png">
+  <link rel="icon" type="image/png" href="/assets/icon-192.png?v=2">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png?v=2">
   <meta name="theme-color" content="#f7f8fb">
   <meta name="apple-itunes-app" content="app-id=6759522037">
   <meta property="og:type" content="website">
@@ -164,7 +164,7 @@ const page = (t) => {
 <body>
   <header class="top">
     <div class="wrap top-row">
-      <a class="brand" href="${t.path}"><img src="/assets/icon-192.png" alt="" width="32" height="32">TaskBuddies</a>
+      <a class="brand" href="${t.path}"><img src="/assets/icon-192.png?v=2" alt="" width="32" height="32">TaskBuddies</a>
       <nav class="links" aria-label="${t.lang === 'tr' ? 'Bölümler' : 'Sections'}">
         <a href="#${idF}">${t.nav[0]}</a><a href="#${idD}">${t.nav[1]}</a><a href="#${idQ}">${t.nav[2]}</a>
       </nav>
@@ -179,7 +179,7 @@ const page = (t) => {
     <div class="wrap">
       <section class="hero dots" aria-labelledby="h">
         <div class="hero-copy">
-          <img class="app-tile" src="/assets/icon-192.png" alt="" width="72" height="72">
+          <img class="app-tile" src="/assets/icon-192.png?v=2" alt="" width="72" height="72">
           <h1 id="h"><span>${t.h1a}</span> <span class="soft">${t.h1b}</span></h1>
           <p class="lead">${t.lead}</p>
           ${stores(t, 'center')}
@@ -281,7 +281,7 @@ const page = (t) => {
     <div class="foot dots">
       <div class="foot-top">
         <div>
-          <a class="brand dark" href="${t.path}"><img src="/assets/icon-192.png" alt="" width="32" height="32">TaskBuddies</a>
+          <a class="brand dark" href="${t.path}"><img src="/assets/icon-192.png?v=2" alt="" width="32" height="32">TaskBuddies</a>
           <p class="foot-h"><span>${t.footA}</span> <span class="soft">${t.footB}</span></p>
           ${stores(t)}
         </div>
